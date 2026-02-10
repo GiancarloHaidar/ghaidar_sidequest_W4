@@ -46,7 +46,9 @@ function setup() {
   let randomGrid = generateLevel(10, 15);
   levels[0] = new Level(randomGrid, TS);
 
-  for (let levelCount = 0; levelCount < Math.random(3); levelCount++) {
+  let randomCount = int(random(3, 9));
+
+  for (let levelCount = 0; levelCount < randomCount; levelCount++) {
     randomGrid = generateLevel(10, 15);
     levels.push(new Level(randomGrid, TS));
   }
