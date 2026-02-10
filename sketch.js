@@ -43,11 +43,11 @@ function setup() {
   */
   levels = levelsData.levels.map((grid) => new Level(copyGrid(grid), TS));
 
-  let randomGrid = generateLevel(Math.random(10, 20), Math.random(15, 30));
+  let randomGrid = generateLevel(10, 15);
   levels[0] = new Level(randomGrid, TS);
 
-  for (let levelCount = 0; levelCount < Math.random(1, 5); levelCount++) {
-    randomGrid = generateLevel(Math.random(10, 20), Math.random(15, 30));
+  for (let levelCount = 0; levelCount < Math.random(3); levelCount++) {
+    randomGrid = generateLevel(10, 15);
     levels.push(new Level(randomGrid, TS));
   }
 
