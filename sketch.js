@@ -132,4 +132,28 @@ function copyGrid(grid) {
   return grid.map((row) => row.slice());
 }
 
-function generateLevel(rows, cols) {}
+function generateLevel(rows, cols) {
+  let newGrid = [];
+
+  for (let r = 0; r < rows; r++) {
+    let row = [];
+
+    for (let c = 0; c < cols; c++) {
+      let tile = 0;
+
+      if (r === 0 || r === rows - 1 || c === 0 || c === cols - 1) {
+        tile = 1;
+      } else if (Math.random() < 0.1 && (r > 2 || c > 2)) {
+        tile = 1;
+      }
+
+      row.push(tile);
+    }
+    newGrid.push(row);
+  }
+
+  newGrid[1][1] = 2;
+  newGrid[rows - 2][cols - 2] = 3;
+
+  return newGrid;
+}
