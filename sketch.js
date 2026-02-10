@@ -45,6 +45,8 @@ function setup() {
 
   let dynamicGrid = generateLevel(10, 15);
 
+  levels.push(new Level(dynamicGrid, TS));
+
   // Create a player.
   player = new Player(TS);
 
