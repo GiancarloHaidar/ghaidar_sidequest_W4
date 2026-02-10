@@ -43,9 +43,13 @@ function setup() {
   */
   levels = levelsData.levels.map((grid) => new Level(copyGrid(grid), TS));
 
-  let dynamicGrid = generateLevel(10, 15);
+  let randomGrid = generateLevel(Math.random(10, 20), Math.random(15, 30));
+  levels[0] = new Level(randomGrid, TS);
 
-  levels.push(new Level(dynamicGrid, TS));
+  for (let levelCount = 0; levelCount < Math.random(1, 5); levelCount++) {
+    randomGrid = generateLevel(Math.random(10, 20), Math.random(15, 30));
+    levels.push(new Level(randomGrid, TS));
+  }
 
   // Create a player.
   player = new Player(TS);
