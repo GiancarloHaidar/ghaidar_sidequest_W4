@@ -131,3 +131,5 @@ function copyGrid(grid) {
   */
   return grid.map((row) => row.slice());
 }
+
+function generateLevel(rows, cols) {}
