@@ -43,6 +43,8 @@ function setup() {
   */
   levels = levelsData.levels.map((grid) => new Level(copyGrid(grid), TS));
 
+  let dynamicGrid = generateLevel(10, 15);
+
   // Create a player.
   player = new Player(TS);
 
